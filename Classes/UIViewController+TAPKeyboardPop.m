@@ -40,7 +40,7 @@
 {
     [self tap_beginAppearanceTransition:isAppearing animated:animated];
 
-    if (isAppearing || !animated) {
+    if (isAppearing || !self.transitionCoordinator.initiallyInteractive) {
         return;
     }
 
